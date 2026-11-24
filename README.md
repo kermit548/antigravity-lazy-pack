@@ -15,11 +15,11 @@
 把這行貼給你的 AI agent：
 
 ```
-這是 AntiGravity 懶人包 https://github.com/mathruffian-dot/antigravity-lazy-pack
+這是 AntiGravity 懶人包 https://github.com/kermit548/antigravity-lazy-pack
 請讀取 repo 內容，列出所有可用的懶人包，問我要裝哪些。
 ```
 
-AI 會自動讀取 `SKILL.md`（安裝入口），列出 6 個技能，問你要裝哪些，然後自動安裝。
+AI 會自動讀取 `SKILL.md`（安裝入口），列出 15 個技能（`01`–`06` 與 `A01`–`A09`），問你要裝哪些，然後自動安裝。
 
 ### 方式二：手動開啟 MD 檔
 

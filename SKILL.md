@@ -40,12 +40,13 @@ description: AntiGravity 懶人包 — 服務連接與工作流程設定。說�
 
 ## 步驟三：依序安裝
 
-對選取的每個 skill：
+對選取的每個 skill（全域安裝加 `-g`，僅限單一專案安裝請省略 `-g`）：
 ```bash
-npx skills add mathruffian-dot/antigravity-lazy-pack --skill <skill名稱> -g -y
+npx skills add kermit548/antigravity-lazy-pack --skill <skill名稱> -g -y
 ```
 
-若 `npx skills add` 無法使用，改為手動：讀取 `skills/<名稱>/SKILL.md` 內容並執行。
+若 `npx skills add` 無法使用，改為手動：讀取 `skills/<名稱>/SKILL.md` 內容並執行（全域放置於 `%USERPROFILE%\.gemini\config\skills\`；僅限單一專案放置於目標專案 `./.agents/skills/`）。
+若安裝於專案 `./.agents/skills/`，呼叫 `A01`、`A02`、`A07`、`A08`、`A09` 等輔助腳本時，請以實際載入之技能目錄取代全域路徑 `%USERPROFILE%\.gemini\config\skills\`。
 
 ## 步驟四：回報結果
 
