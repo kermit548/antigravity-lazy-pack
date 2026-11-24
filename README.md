@@ -1,6 +1,7 @@
-# Anti-Gravity 懶人包
+# Antigravity 懶人包-科米擴增版
 
-這個 repo 只放 Anti-Gravity 使用者可公開套用的懶人包文件，不放個人 NotebookLM 清單、研究產物、生成圖片、測試專案或任何帳號資料。
+這個 repo 只放 Antigravity 使用者可公開套用的懶人包文件，不放個人 NotebookLM 清單、研究產物、生成圖片、測試專案或任何帳號資料。
+如果還沒有使用過 Antigravity 的網友，可以參考我寫的 [Antigravity App 輕鬆入門](https://docs.google.com/document/d/1BUepLm7JUGbdOh0zGLpRsSkOro9YOppYTSefVaTPJ4Q/edit?usp=sharing)
 
 ## 目前檔案
 
@@ -24,7 +25,7 @@ AI 會自動讀取 `SKILL.md`（安裝入口），列出 15 個技能（`01`–`
 ### 方式二：手動開啟 MD 檔
 
 1. 開啟 `README-數字系列基本技能.md`（或 `README-A系列改編技能.md`）
-2. 把文件內容交給 Anti-Gravity 或 AI 編碼助理
+2. 把文件內容交給 Antigravity 或 AI 編碼助理
 3. 依序完成環境檢查、OAuth 登入、NotebookLM / Firebase MCP 設定與工作流程設定
 
 ## 安全原則
