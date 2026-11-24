@@ -1,49 +1,32 @@
 ---
 name: antigravity-obsidian
-description: 在 AntiGravity 連接 Obsidian MCP (MCPVault)。說「連接 Obsidian」「設定 Obsidian」時載入。
+description: 在 AntiGravity 連接 Obsidian（本機保留 MCPVault MCP 設定，另支援直接讀寫 vault）。說「連接 Obsidian」「設定 Obsidian」時載入。
 ---
 
-# 連接 Obsidian（AntiGravity 版）
+# 連接 Obsidian（AntiGravity 版，本機保留 MCPVault 設定）
 
-## 步驟
+> **本機客製標記**：上游 `antigravity-lazy-pack v1.5` 改為直接讀寫 vault 而不裝 MCP，但**本機刻意保留 `@bitbonsai/mcpvault` MCP 設定**，與 `%USERPROFILE%\.gemini\config\mcp_config.json` 中既有的 `"obsidian"` 項目保持一致。
 
-### 1. 找到 vault
-請先確認 Obsidian vault 的實體路徑。常見位置：
-- `C:\Users\<你>\OneDrive\文件\Secondbrain`
-- `C:\Users\<你>\Documents\<vault 名稱>`
-- `G:\我的雲端硬碟\<vault 名稱>`
+## 一、 本機現行 MCPVault 設定（預設保留）
 
-### 2. 安裝 MCPVault
-在命令提示字元或 PowerShell 中執行安裝：
-```powershell
-npm.cmd install -g @bitbonsai/mcpvault
-where.exe mcpvault
-```
-常見路徑為：
-`C:\Users\<你>\AppData\Roaming\npm\mcpvault.cmd`
+1. **已安裝套件**：`@bitbonsai/mcpvault`（`%APPDATA%\npm\mcpvault.cmd`）
+2. **對應 Vault 路徑**：`<YOUR_OBSIDIAN_VAULT_PATH>`
+3. **AntiGravity MCP 設定檔**（`%USERPROFILE%\.gemini\config\mcp_config.json`）：
+   ```json
+   "obsidian": {
+     "command": "C:\\Users\\<USERNAME>\\AppData\\Roaming\\npm\\mcpvault.cmd",
+     "args": [
+       "<YOUR_OBSIDIAN_VAULT_PATH>"
+     ],
+     "enabled": true
+   }
+   ```
+4. **常用操作**：直接使用 `obsidian` MCP 工具（`read_note`、`write_note`、`patch_note`、`search_notes`、`list_directory`、`update_frontmatter` 等）讀寫筆記。
 
-### 3. 註冊 Obsidian MCP
-請依 AntiGravity 實際 MCP 設定方式加入設定檔：
-```json
-"obsidian": {
-  "type": "local",
-  "command": [
-    "C:\\Users\\<你>\\AppData\\Roaming\\npm\\mcpvault.cmd",
-    "C:\\Users\\<你>\\OneDrive\\文件\\Secondbrain"
-  ],
-  "enabled": true
-}
-```
+## 二、 替代方案（上游 v1.5 直接讀寫模式）
 
-如果使用 command / args 分開的格式：
-```json
-{
-  "command": "C:\\Users\\<你>\\AppData\\Roaming\\npm\\mcpvault.cmd",
-  "args": ["C:\\Users\\<你>\\OneDrive\\文件\\Secondbrain"]
-}
-```
+若未來決定停用 MCPVault，可在 `mcp_config.json` 移除 `"obsidian"` 項目，改由 AntiGravity 直接讀寫 `<YOUR_OBSIDIAN_VAULT_PATH>` 內的 Markdown 檔案（於專案 `AGENTS.md` 註記對應路徑即可）。
 
-### 4. 驗證
-重新啟動 AntiGravity，先測試讀取 vault 根目錄，並測試建立與讀回一篇測試筆記。
+## 三、 安全提醒
 
-⚠️ 安全提醒：請勿將你的實體 vault 路徑或任何敏感筆記內容 commit 到公開儲存庫中。
+* 嚴禁將私人筆記內容或含敏感資訊的本機路徑提交（commit）至公開儲存庫。

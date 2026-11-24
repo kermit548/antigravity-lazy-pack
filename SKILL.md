@@ -9,6 +9,12 @@ description: AntiGravity 懶人包 — 服務連接與工作流程設定。說�
 
 ## 步驟一：認識可用懶人包
 
+### 說明文件索引
+- `README-數字系列基本技能.md`：數字系列基本技能（`01`–`06`）完整安裝與設定指南
+- `README-A系列改編技能.md`：A 系列改編技能（`A01`–`A09`）功能總覽、觸發詞與共用設計規範
+
+### 可安裝技能清單
+
 | 編號 | Skill 名稱 | 說明 |
 |------|-----------|------|
 | 01 | `01-notebooklm` | 連接 NotebookLM MCP |
@@ -17,11 +23,20 @@ description: AntiGravity 懶人包 — 服務連接與工作流程設定。說�
 | 04 | `04-draw` | 生圖指引 |
 | 05 | `05-workflow` | 開工 / 收工 / 新專案初始化 |
 | 06 | `06-obsidian` | 連接 Obsidian MCP (MCPVault) |
-| 00 | `00-install-all` | 一次安裝全部 |
+| A01 | `A01-soil-html-deck` | SOIL 互動式單檔 HTML 簡報 |
+| A02 | `A02-soil-image-deck` | SOIL 純圖片／底圖 `.pptx` 教學簡報 |
+| A03 | `A03-soil-teaching-deck` | SOIL 標準可編輯 `.pptx` 教學簡報 |
+| A04 | `A04-find-skills` | 探索與搜尋可用 Agent Skills |
+| A05 | `A05-deep-research-explainer` | 研究型深度解說長文生成 |
+| A06 | `A06-error-screenshot-helper` | 錯誤截圖與終端報錯診斷 |
+| A07 | `A07-video-use-for-Gemini` | 自動影片剪輯與字幕燒錄 |
+| A08 | `A08-create-files-for-Gemini` | 特化 Word/PPT/Excel/PDF 建立與編修 |
+| A09 | `A09-webapp-testing-for-Gemini` | Web 應用程式 E2E 與資安自動化測試 |
+| 00 | `00-install-all` | 一次安裝全部（`01`–`06` 與 `A01`–`A09`） |
 
 ## 步驟二：讓使用者選擇
 
-列出上表給使用者看，然後問：「你要安裝哪些？輸入全部或編號組合（例如 01, 02, 03）。」
+列出上表給使用者看，然後問：「你要安裝哪些？輸入全部或編號組合（例如 01, 02, A08）。」
 
 ## 步驟三：依序安裝
 

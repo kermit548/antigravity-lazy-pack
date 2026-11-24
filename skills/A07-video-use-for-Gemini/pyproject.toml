@@ -1,0 +1,21 @@
+[project]
+name = "video-use-for-google"
+version = "0.2.0"
+description = "Conversation-driven video editor skill for AntiGravity (Windows 11 PowerShell + local faster-whisper)"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "faster-whisper",
+    "pillow",
+    "numpy",
+]
+
+[project.optional-dependencies]
+animations = ["manim"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []
